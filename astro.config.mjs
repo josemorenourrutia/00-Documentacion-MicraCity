@@ -3,10 +3,12 @@ import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
 import react from '@astrojs/react';
-import tailwindcss from '@tailwindcss/vite';
+// import tailwindcss from '@tailwindcss/vite';
 
 // https://astro.build/config
 export default defineConfig({
+  site: 'https://josemorenourrutia.github.io/00-Documentacion-MicraCity',
+  base: '/00-Documentacion-MicraCity/', // 🔑 importante para GitHub Pages
   integrations: [starlight({
     title: 'MicraCity',
     social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
@@ -29,6 +31,6 @@ export default defineConfig({
   }), react()],
 
   vite: {
-    plugins: [tailwindcss()],
+    // plugins: [tailwindcss()],
   },
 });
