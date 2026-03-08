@@ -7,8 +7,8 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://josemorenourrutia.github.io/00-Documentacion-MicraCity/dist/',
-  base: '/00-Documentacion-MicraCity/dist', // 🔑 importante para GitHub Pages
+  site: 'https://josemorenourrutia.github.io/00-Documentacion-MicraCity',
+  base: '/00-Documentacion-MicraCity/dist/', // 🔑 importante para GitHub Pages
   integrations: [starlight({
     title: 'MicraCity',
     social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
