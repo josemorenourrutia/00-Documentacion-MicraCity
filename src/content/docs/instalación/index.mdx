@@ -1,0 +1,81 @@
+---
+title: Instalación de Expo
+description: Cómo crear y ejecutar una aplicación con Expo y React Native
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+# Instalación de Expo
+
+Esta guía explica cómo crear un proyecto utilizando **Expo y React Native** para desarrollar aplicaciones móviles multiplataforma.
+
+Expo permite desarrollar aplicaciones para:
+
+- Android
+- iOS
+- Web
+
+utilizando una única base de código.
+
+---
+
+## Requisitos previos
+
+Antes de comenzar, asegúrate de tener instalado:
+
+<CardGrid>
+  <Card title="Node.js" icon="logos:nodejs">
+
+  Entorno de ejecución necesario para instalar dependencias y ejecutar herramientas de desarrollo.
+
+  Recomendado:
+
+    Node.js 20+
+
+  
+  </Card>
+
+  <Card title="npm o pnpm" icon="logos:npm-icon">
+
+  Gestor de paquetes utilizado para instalar las dependencias del proyecto.
+
+  </Card>
+
+  <Card title="Expo Go" icon="mdi:cellphone">
+
+  Aplicación móvil que permite ejecutar el proyecto directamente en un dispositivo.
+
+  Disponible en Android e iOS.
+
+  </Card>
+</CardGrid>
+
+---
+
+## Crear un proyecto Expo
+
+Para crear una nueva aplicación ejecuta:
+
+```bash
+npx create-expo-app@latest
+```
+
+El asistente te pedirá algunas opciones:
+
+What is your app named?
+my-app
+
+Which template would you like to use?
+Blank (TypeScript)
+
+
+## Para iniciar el servidor de desarrollo:
+
+```bash
+npm run start
+```
+
+## Ejecuta el proyecto en un dispositivo Android o emulador.
+```bash
+npm run android
+```

@@ -1,0 +1,24 @@
+/* Oculta el contenedor de búsqueda en la cabecera */
+site-search {
+  display: none !important;
+}
+
+.group-label {
+  text-transform: capitalize;
+}
+
+/* sidebar más estrecho */
+.sidebar-pane {
+  width: 260px;
+}
+
+/* más espacio entre items */
+.sidebar a {
+  padding: 6px 10px;
+}
+
+/* títulos más visibles */
+.group-label {
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}

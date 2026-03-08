@@ -1,0 +1,132 @@
+---
+title: Estructura backend de Micracity
+description: Introducción al la esctructura backend de Micracity
+---
+
+# Estructura backend de Micracity
+
+El backend está construido con:
+
+ciutat-backend/
+├ dist/ # Código compilado
+|
+├ src/
+│ ├ controllers/ # Lógica de las rutas
+│ ├ models/ # Modelos de Sequelize
+│ ├ routes/ # Rutas de Express
+│ ├ services/ # Lógica de negocio y helpers
+│ ├ utils/ # Funciones auxiliares
+│ └ app.ts # Archivo principal
+├ package.json
+├ tsconfig.json
+└ .env
+
+**Descripción rápida:**
+
+- `controllers/` → recibe las peticiones y llama a servicios
+- `routes/` → define las rutas de la API
+- `models/` → define los modelos de base de datos
+- `services/` → contiene la lógica
+- `utils/` → funciones auxiliares y helpers
+
+Proporciona:
+
+- APIs REST para la app móvil
+- Gestión de usuarios y datos
+- Subida y procesamiento de imágenes
+- Conexión con la base de datos MySQL
+
+Para más información revisa las secciones siguientes:
+- [Dependencias](./dependencias)
+- [Estructura](./estructura)
+- [Multer + Sharp](./multer-sharp)
+- [Sequelize](./sequelize)
+- [Conexión con la app](./conexion-app)
+
+---
+title: Backend Micracity
+description: Documentación completa del backend de Micracity
+---
+
+# Backend de Micracity
+
+Este backend está construido con **Node.js**, **TypeScript** y **Express**, y proporciona:
+
+- APIs REST para la app móvil
+- Gestión de usuarios y datos
+- Subida y procesamiento de imágenes
+- Conexión con la base de datos MySQL
+
+---
+
+## Dependencias principales
+
+### Express
+
+:contentReference[oaicite:0]{index=0} es un framework minimalista para Node.js que permite crear servidores web y APIs de forma sencilla.
+
+Se utiliza para:
+
+- Crear el servidor HTTP
+- Definir rutas
+- Procesar peticiones y respuestas
+
+---
+
+### Cors
+
+:contentReference[oaicite:1]{index=1} permite habilitar **Cross-Origin Resource Sharing**, para que la app móvil o web pueda comunicarse con el backend.
+
+---
+
+### Dotenv
+
+:contentReference[oaicite:2]{index=2} permite cargar variables de entorno desde un archivo `.env`, utilizado para credenciales y configuraciones sensibles.
+
+---
+
+### Multer
+
+:contentReference[oaicite:3]{index=3} permite gestionar la subida de archivos, como imágenes, desde la app al servidor.
+
+---
+
+### Sharp
+
+:contentReference[oaicite:4]{index=4} permite procesar imágenes: redimensionar, comprimir y convertir formatos.
+
+---
+
+### MySQL2
+
+:contentReference[oaicite:5]{index=5} es el driver que permite conectar Node.js con bases de datos MySQL.
+
+---
+
+### Sequelize
+
+:contentReference[oaicite:6]{index=6} es un ORM que permite trabajar con bases de datos usando modelos y objetos, definiendo relaciones entre tablas y gestionando migraciones.
+
+---
+
+## Dependencias de desarrollo
+
+### TypeScript
+
+:contentReference[oaicite:7]{index=7} añade tipado estático a JavaScript, mejorando la detección temprana de errores y el autocompletado.
+
+---
+
+### @types/express, @types/cors, @types/multer
+
+Proporcionan definiciones de tipos para Express, Cors y Multer al usar TypeScript.
+
+---
+
+### TSLint
+
+:contentReference[oaicite:8]{index=8} es una herramienta de análisis estático para revisar la calidad del código TypeScript y detectar malas prácticas.
+
+---
+
+## Estructura del proyecto

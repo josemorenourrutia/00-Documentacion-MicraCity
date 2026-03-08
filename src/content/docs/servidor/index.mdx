@@ -1,0 +1,253 @@
+---
+title: Servidor Micracity
+description: Servidor Micracity.
+
+---# Dependencias del Backend
+
+Este proyecto utiliza **Node.js**, **TypeScript** y **Express** para crear una API que gestiona formularios, imágenes y acceso a base de datos.
+
+A continuación se describen las principales dependencias utilizadas.
+
+---
+
+## Dependencias principales
+
+### Express
+
+Express es un framework minimalista para **Node.js** que permite crear servidores web y APIs de forma sencilla.
+
+Se utiliza para:
+
+* Crear el servidor HTTP
+* Definir rutas (`routes`)
+* Procesar peticiones y respuestas
+
+Instalación:
+
+```bash
+npm install express
+```
+
+---
+
+### Cors
+
+cors permite habilitar **Cross-Origin Resource Sharing**.
+
+Esto permite que una aplicación frontend (por ejemplo una app en React Native o una web) pueda comunicarse con el servidor.
+
+Instalación:
+
+```bash
+npm install cors
+```
+
+---
+
+### Dotenv
+
+dotenv permite cargar variables de entorno desde un archivo `.env`.
+
+Se utiliza para guardar información sensible como:
+
+* credenciales de base de datos
+* claves secretas
+* configuración del servidor
+
+Instalación:
+
+```bash
+npm install dotenv
+```
+
+Ejemplo:
+
+```
+DB_HOST=localhost
+DB_USER=root
+DB_PASSWORD=1234
+```
+
+---
+
+### Multer
+
+multer es un middleware para manejar **subida de archivos** en Express.
+
+Se utiliza en este proyecto para:
+
+* subir imágenes
+* procesar formularios con archivos
+* guardar archivos en el servidor
+
+Instalación:
+
+```bash
+npm install multer
+```
+
+---
+
+### Sharp
+
+sharp es una librería para **procesamiento de imágenes de alto rendimiento**.
+
+Permite:
+
+* redimensionar imágenes
+* comprimirlas
+* convertir formatos
+
+Instalación:
+
+```bash
+npm install sharp
+```
+
+---
+
+### MySQL2
+
+mysql2 es un driver que permite conectar Node.js con bases de datos **MySQL**.
+
+Se utiliza para ejecutar consultas SQL desde el servidor.
+
+Instalación:
+
+```bash
+npm install mysql2
+```
+
+---
+
+### Sequelize
+
+sequelize es un **ORM (Object Relational Mapper)** para Node.js.
+
+Permite trabajar con bases de datos usando **modelos y objetos** en lugar de escribir SQL directamente.
+
+Se utiliza para:
+
+* definir modelos de datos
+* crear relaciones entre tablas
+* gestionar migraciones y consultas
+
+Instalación:
+
+```bash
+npm install sequelize
+```
+
+---
+
+## Dependencias de desarrollo
+
+Estas dependencias solo se utilizan durante el desarrollo.
+
+---
+
+### TypeScript
+
+TypeScript añade **tipado estático** a JavaScript.
+
+Ventajas:
+
+* detección temprana de errores
+* mejor autocompletado
+* código más mantenible
+
+Instalación:
+
+```bash
+npm install -D typescript
+```
+
+---
+
+### Types para Express
+
+@types/express proporciona definiciones de tipos para usar Express con TypeScript.
+
+Instalación:
+
+```bash
+npm install -D @types/express
+```
+
+---
+
+### Types para Cors
+
+@types/cors añade tipado a la librería cors.
+
+Instalación:
+
+```bash
+npm install -D @types/cors
+```
+
+---
+
+### Types para Multer
+
+@types/multer proporciona soporte de tipos para multer.
+
+Instalación:
+
+```bash
+npm install -D @types/multer
+```
+
+---
+
+### TSLint
+
+TSLint es una herramienta de análisis estático para revisar la calidad del código TypeScript.
+
+Permite detectar:
+
+* errores comunes
+* problemas de estilo
+* malas prácticas
+
+Instalación:
+
+```bash
+npm install -D tslint
+```
+
+---
+
+## Script de desarrollo
+
+El proyecto incluye el siguiente script en `package.json`:
+
+```json
+"scripts": {
+  "dev": "node --watch dist/app.js"
+}
+```
+
+Este script ejecuta el servidor y **reinicia automáticamente cuando cambia el código compilado**.
+
+Para iniciarlo:
+
+```bash
+npm run dev
+```
+
+---
+
+## Resumen
+
+El backend del proyecto utiliza:
+
+* Node.js
+* Express
+* TypeScript
+* Sequelize
+* MySQL
+* Multer
+* Sharp
+
+Este conjunto permite construir una **API robusta capaz de gestionar formularios, imágenes y datos almacenados en base de datos**.

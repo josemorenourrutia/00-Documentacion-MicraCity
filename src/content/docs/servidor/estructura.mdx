@@ -1,0 +1,111 @@
+---
+title: Backend Micracity
+description: Documentación completa del backend de Micracity
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+# Backend de Micracity
+
+Este backend está construido con **Node.js**, **TypeScript** y **Express**, y proporciona:
+
+- APIs REST para la app móvil
+- Gestión de usuarios y datos
+- Subida y procesamiento de imágenes
+- Conexión con la base de datos MySQL
+
+---
+
+## Dependencias principales
+
+<CardGrid>
+  <Card title="Express" icon="logos:express">
+    Framework minimalista para Node.js para crear servidores web y APIs de forma sencilla. Permite definir rutas, procesar peticiones y respuestas.
+  </Card>
+
+  <Card title="Cors" icon="mdi:shield-cross">
+    Middleware para habilitar Cross-Origin Resource Sharing, permitiendo que la app móvil o web se comunique con el backend.
+  </Card>
+
+  <Card title="Dotenv" icon="mdi:circle-edit-outline">
+    Carga variables de entorno desde un archivo .env, utilizado para credenciales y configuraciones sensibles.
+  </Card>
+
+  <Card title="Multer" icon="mdi:upload">
+    Middleware para gestionar la subida de archivos (como imágenes) desde la app al servidor.
+  </Card>
+
+  <Card title="Sharp" icon="mdi:image-edit">
+    Librería para procesar imágenes: redimensionar, comprimir y convertir formatos.
+  </Card>
+
+  <Card title="MySQL2" icon="logos:mysql">
+    Driver para conectar Node.js con bases de datos MySQL.
+  </Card>
+
+  <Card title="Sequelize" icon="mdi:database">
+    ORM que permite trabajar con bases de datos usando modelos y objetos, definiendo relaciones entre tablas y gestionando migraciones.
+  </Card>
+</CardGrid>
+
+---
+
+## Dependencias de desarrollo
+
+<CardGrid>
+  <Card title="TypeScript" icon="logos:typescript-icon">
+    Añade tipado estático a JavaScript, mejora la detección temprana de errores y autocompletado.
+  </Card>
+
+  <Card title="@types/express, @types/cors, @types/multer" icon="mdi:code-tags">
+    Proporcionan definiciones de tipos para usar estas librerías con TypeScript.
+  </Card>
+
+  <Card title="TSLint" icon="mdi:check-circle-outline">
+    Herramienta de análisis estático para revisar la calidad del código TypeScript y detectar malas prácticas.
+  </Card>
+</CardGrid>
+
+---
+
+## Estructura del proyecto
+
+```text
+ciutat-backend/
+├─ dist/             # Código compilado
+├─ src/
+│  ├─ controllers/   # Lógica de las rutas
+│  ├─ models/        # Modelos de Sequelize
+│  ├─ routes/        # Rutas de Express
+│  ├─ services/      # Lógica de negocio
+│  └─ utils/         # Funciones auxiliares
+├─ package.json
+├─ tsconfig.json
+└─ .env
+
+- `controllers/` → recibe peticiones y llama a servicios  
+- `routes/` → define las rutas de la API  
+- `models/` → define modelos de base de datos  
+- `services/` → lógica de negocio  
+- `utils/` → funciones auxiliares  
+
+---
+
+## Funcionalidades principales
+
+- Gestión de formularios y datos
+- Subida y procesamiento de imágenes
+- Manejo de base de datos con Sequelize y MySQL
+- Conexión con la app Expo / React Native mediante HTTP/HTTPS
+- Uso de variables de entorno para configuración segura
+
+---
+
+## Script de desarrollo
+
+En `package.json`:
+
+```json
+"scripts": {
+  "dev": "node --watch dist/app.js"
+}

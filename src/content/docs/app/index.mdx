@@ -1,0 +1,406 @@
+---
+title: Micracity
+description: Herramientas y librerías utilizadas en el proyecto Micracity
+---
+
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+
+El proyecto **Micracity** está construido con un conjunto de herramientas modernas del ecosistema **Expo y React Native**.
+
+Estas librerías se utilizan para gestionar:
+
+- navegación
+- estado global
+- comunicación con APIs
+- almacenamiento local
+- internacionalización
+- estilos
+- acceso a funcionalidades nativas
+
+---
+
+## Framework principal
+
+<CardGrid>
+  <Card title="React" icon="logos:react">
+  
+  Librería principal para construir interfaces basadas en **componentes reutilizables**.
+
+  Permite una arquitectura declarativa y modular.
+
+  Dependencias:
+
+    - react
+    - react-dom
+
+
+  </Card>
+
+  <Card title="React Native" icon="logos:react">
+
+  Framework para crear aplicaciones móviles utilizando React.
+
+  Permite desarrollar aplicaciones **Android, iOS y Web** con una única base de código.
+
+  Dependencias:
+
+  - react-native
+  - react-native-web
+
+  </Card>
+
+  <Card title="Expo" icon="logos:expo">
+
+  Plataforma que simplifica el desarrollo de aplicaciones React Native.
+
+  Proporciona:
+
+  - APIs nativas
+  - herramientas de desarrollo
+  - sistema de builds
+
+  Dependencia:
+
+    - expo
+
+  </Card>
+  </CardGrid>
+
+---
+
+---
+
+## Navegación
+
+<CardGrid>
+<Card title="Expo Router" icon="mdi:routes">
+
+Sistema de navegación basado en **estructura de archivos**.
+
+Permite:
+
+- layouts anidados
+- deep linking
+- rutas automáticas
+
+Dependencia:
+
+- expo-router
+
+</Card>
+
+<Card title="React Navigation" icon="mdi:navigation">
+
+Librería utilizada para gestionar la navegación entre pantallas.
+
+Dependencias utilizadas:
+
+- @react-navigation/native
+- @react-navigation/bottom-tabs
+- @react-navigation/elements
+- react-native-screens
+- react-native-safe-area-context
+- react-native-gesture-handler
+
+</Card>
+</CardGrid>
+
+---
+
+## Comunicación con APIs
+
+<CardGrid>
+<Card title="Axios" icon="logos:axios">
+
+Cliente HTTP utilizado para comunicarse con el backend.
+
+Permite:
+
+- peticiones HTTP
+- interceptores
+- configuración global
+
+Dependencia:
+
+- axios
+
+</Card>
+
+<Card title="TanStack Query" icon="logos:tanstack-query-icon">
+
+Librería para gestionar **datos remotos provenientes de APIs**.
+
+Características:
+
+- cache automático
+- refetch inteligente
+- manejo de loading y errores
+
+Dependencia:
+
+- @tanstack/react-query
+
+</Card>
+</CardGrid>
+
+---
+
+## Gestión de estado
+
+<CardGrid>
+<Card title="Zustand" icon="logos:zustand">
+
+Librería ligera para gestionar el **estado global de la aplicación**.
+
+Usada en el proyecto para:
+
+- autenticación
+- estado global de UI
+- preferencias del usuario
+
+Dependencia:
+
+- zustand
+
+</Card>
+</CardGrid>
+
+---
+
+## Estilos
+
+<CardGrid>
+<Card title="NativeWind" icon="mdi:tailwind">
+
+Permite utilizar **TailwindCSS en React Native**.
+
+Facilita la creación de interfaces consistentes mediante clases utilitarias.
+
+Dependencia:
+
+- nativewind
+
+</Card>
+
+<Card title="TailwindCSS" icon="logos:tailwindcss-icon">
+
+Framework de utilidades CSS utilizado para definir estilos.
+
+Dependencia:
+
+- tailwindcss
+
+</Card>
+</CardGrid>
+
+---
+
+## Formularios
+
+<CardGrid>
+<Card title="Formik" icon="mdi:form-select">
+
+Librería utilizada para gestionar formularios en React.
+
+Proporciona:
+
+- manejo del estado del formulario
+- validación
+- manejo de errores
+
+Dependencia:
+
+- formik
+
+</Card>
+</CardGrid>
+
+---
+
+## Internacionalización
+
+<CardGrid>
+<Card title="i18next" icon="mdi:translate">
+
+Sistema de traducciones utilizado para soportar múltiples idiomas.
+
+En el proyecto se utiliza para:
+
+- español
+- catalán
+
+Dependencias:
+
+- i18next
+- react-i18next
+
+</Card>
+</CardGrid>
+
+---
+
+## Almacenamiento
+
+<CardGrid>
+<Card title="AsyncStorage" icon="mdi:database">
+
+Sistema de almacenamiento persistente del dispositivo.
+
+Usado para:
+
+- configuraciones
+- preferencias de usuario
+
+Dependencia:
+
+- @react-native-async-storage/async-storage
+
+</Card>
+
+<Card title="SecureStore" icon="mdi:lock">
+
+Almacenamiento seguro para datos sensibles.
+
+Usado para:
+
+- tokens
+- credenciales
+
+Dependencia:
+
+- expo-secure-store
+
+</Card>
+</CardGrid>
+
+---
+
+## Imágenes y multimedia
+
+<CardGrid>
+<Card title="Expo Image" icon="mdi:image">
+
+Componente optimizado para mostrar imágenes.
+
+Dependencia:
+
+- expo-image
+
+</Card>
+
+<Card title="Image Picker" icon="mdi:camera">
+
+Permite seleccionar imágenes desde:
+
+- cámara
+- galería
+
+Dependencia:
+
+- expo-image-picker
+
+</Card>
+
+<Card title="Media Library" icon="mdi:folder-image">
+
+Acceso a la biblioteca multimedia del dispositivo.
+
+Dependencia:
+
+- expo-media-library
+
+</Card>
+</CardGrid>
+
+---
+
+## Experiencia de usuario
+
+<CardGrid>
+<Card title="Haptics" icon="mdi:vibrate">
+
+Permite proporcionar **feedback háptico** mediante vibraciones.
+
+Dependencia:
+
+- expo-haptics
+
+</Card>
+
+<Card title="Blur" icon="mdi:blur">
+
+Permite aplicar efectos de desenfoque en la interfaz.
+
+Dependencia:
+
+- expo-blur
+
+</Card>
+
+<Card title="Vector Icons" icon="mdi:vector-square">
+
+Colección de iconos populares utilizados en la interfaz.
+
+Dependencia:
+
+- @expo/vector-icons
+
+</Card>
+</CardGrid>
+
+---
+
+## Componentes adicionales
+
+<CardGrid>
+<Card title="React Native Calendars" icon="mdi:calendar">
+
+Componentes de calendario interactivos para selección de fechas.
+
+Dependencia:
+
+- react-native-calendars
+
+</Card>
+
+<Card title="WebView" icon="mdi:web">
+
+Permite renderizar contenido web dentro de la aplicación.
+
+Dependencia:
+
+- react-native-webview
+
+</Card>
+</CardGrid>
+
+---
+
+## Herramientas de desarrollo
+
+<CardGrid>
+<Card title="TypeScript" icon="logos:typescript-icon">
+
+Lenguaje utilizado para proporcionar **tipado estático** al proyecto.
+
+Dependencia:
+
+- typescript
+
+</Card>
+
+<Card title="ESLint" icon="logos:eslint">
+
+Herramienta de análisis estático para mantener la calidad del código.
+
+Dependencias:
+
+- eslint
+- eslint-config-expo
+
+</Card>
+</CardGrid>
+
+---
+
