@@ -2,28 +2,44 @@
 title: Micracity
 description: Documentación del proyecto
 
+sidebar:
+  order: 1
+
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { LinkCard, Card, CardGrid } from '@astrojs/starlight/components';
 
 Aplicación desarrollada con **Expo + React Native**.
 
 <CardGrid>
-  <Card title="Guía de inicio" icon="mdi:rocket" href="/guides/example">
+  <Card title="FrontEnd" icon="mdi:rocket" href="link:app">
+    Aplicación desarrollada con **Expo + React Native**.
 
-  Aprende a instalar y ejecutar el proyecto.
+    El proyecto **Micracity** está construido con un conjunto de herramientas modernas del ecosistema **Expo y React Native**.
+
+    Estas librerías se utilizan para gestionar:
+
+    - Navegación
+    - Estado global
+    - Comunicación con APIs
+    - Almacenamiento local
+    - Internacionalización
+    - Estilos
+    - Acceso a funcionalidades nativas
+
+    <LinkCard title="🚀 APP MicraCity" icon="mdi:rocket" href="/app/" />
 
   </Card>
 
-  <Card title="Arquitectura" icon="mdi:layers">
+  <Card title="🚀 BServidor MicraCity" icon="mdi:tools">
 
-  Explicación de la arquitectura de la aplicación.
+    Este proyecto utiliza **Node.js**, **TypeScript** y **Express**, y proporciona:
 
-  </Card>
+    - APIs REST para la app móvil
+    - Gestión de usuarios y datos
+    - Subida y procesamiento de imágenes
+    - Conexión con la base de datos MySQL
 
-  <Card title="Stack tecnológico" icon="mdi:tools">
-
-  Librerías y herramientas utilizadas.
-
+    <LinkCard title="🚀 Servidor MicraCity" icon="mdi:rocket" href="/servidor/" />
   </Card>
 </CardGrid>
