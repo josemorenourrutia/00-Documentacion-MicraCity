@@ -9,7 +9,7 @@ const isDev = process.env.NODE_ENV === 'development';
 
 // https://astro.build/config
 export default defineConfig({
-  // site: 'https://josemorenourrutia.github.io/00-Documentacion-MicraCity',
+  site: 'https://josemorenourrutia.github.io/00-Documentacion-MicraCity',
 
   base: isDev
     ? ''
