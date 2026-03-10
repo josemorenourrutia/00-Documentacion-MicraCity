@@ -9,6 +9,11 @@ import react from '@astrojs/react';
 export default defineConfig({
   site: 'https://josemorenourrutia.github.io/00-Documentacion-MicraCity',
   base: '/00-Documentacion-MicraCity/dist/', // 🔑 importante para GitHub Pages
+
+  build: {
+    assets: 'assets' // 🔑 cambia _astro → assets
+  },
+
   integrations: [starlight({
     title: 'MicraCity',
     social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
