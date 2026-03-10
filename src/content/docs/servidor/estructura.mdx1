@@ -103,6 +103,12 @@ ciutat-backend/
 
 ## Script de desarrollo
 
+Ejecutar:
+
+tsc-watch
+
+y además
+
 En `package.json`:
 
 ```json

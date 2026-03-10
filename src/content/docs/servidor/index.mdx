@@ -2,9 +2,18 @@
 title: Servidor Micracity
 description: Servidor Micracity.
 
----# Dependencias del Backend
+---
 
-Este proyecto utiliza **Node.js**, **TypeScript** y **Express** para crear una API que gestiona formularios, imágenes y acceso a base de datos.
+import { Card, CardGrid } from '@astrojs/starlight/components';
+
+# Dependencias del Backend
+
+Este proyecto utiliza **Node.js**, **TypeScript** y **Express**, y proporciona:
+
+- APIs REST para la app móvil
+- Gestión de usuarios y datos
+- Subida y procesamiento de imágenes
+- Conexión con la base de datos MySQL
 
 A continuación se describen las principales dependencias utilizadas.
 
@@ -12,133 +21,125 @@ A continuación se describen las principales dependencias utilizadas.
 
 ## Dependencias principales
 
-### Express
+<CardGrid>
+  <Card title="Express" icon="logos:express">
+    Express es un framework minimalista para **Node.js** que permite crear servidores web y APIs de forma sencilla.
 
-Express es un framework minimalista para **Node.js** que permite crear servidores web y APIs de forma sencilla.
+    Se utiliza para:
 
-Se utiliza para:
+    * Crear el servidor HTTP
+    * Definir rutas (`routes`)
+    * Procesar peticiones y respuestas
 
-* Crear el servidor HTTP
-* Definir rutas (`routes`)
-* Procesar peticiones y respuestas
+    Instalación:
 
-Instalación:
+    ```bash
+    npm install express
+    ```
+  </Card>
 
-```bash
-npm install express
+  <Card title="Cors" icon="mdi:shield-cross">
+    Middleware para habilitar **Cross-Origin Resource Sharing**, permitiendo que la app móvil o web se comunique con el backend.
+
+    Esto permite que una aplicación frontend (por ejemplo una app en React Native o una web) pueda comunicarse con el servidor.
+
+    Instalación:
+
+    ```bash
+    npm install cors
+    ```
+  </Card>
+
+  <Card title="Dotenv" icon="mdi:circle-edit-outline">
+    Carga variables de entorno desde un archivo .env, utilizado para credenciales y configuraciones sensibles.
+    
+    Se utiliza para guardar información sensible como:
+
+    * Credenciales de base de datos
+    * Claves secretas
+    * Configuración del servidor
+
+    Instalación:
+
+    ```bash
+    npm install dotenv
+    ```
+
+    Ejemplo:
+
+    ```
+    DB_HOST=localhost
+    DB_USER=root
+    DB_PASSWORD=1234
+    ```
+  </Card>
+
+  <Card title="Multer" icon="mdi:upload">
+
+    Es un middleware para manejar **subida de archivos** (como imágenes) desde la app al servidor en Express.
+
+    Se utiliza en este proyecto para:
+
+    * Subir imágenes
+    * Procesar formularios con archivos
+    * Guardar archivos en el servidor
+
+    Instalación:
+
+    ```bash
+    npm install multer
+    ```
+
+  </Card>
+
+  <Card title="Sharp" icon="mdi:image-edit">
+    Es una librería para **procesamiento de imágenes de alto rendimiento** para procesar imágenes: redimensionar, comprimir y convertir formatos.
+
+    Permite:
+
+    * Redimensionar imágenes
+    * Comprimirlas
+    * Convertir formatos
+
+    Instalación:
+
+    ```bash
+    npm install sharp
+    ```
+  </Card>
+
+  <Card title="MySQL2" icon="logos:mysql">
+    Es un driver que permite conectar Node.js con bases de datos **MySQL**.
+
+    Se utiliza para ejecutar consultas SQL desde el servidor.
+
+    Instalación:
+
+    ```bash
+    npm install mysql2
+    ```
+
+  </Card>
+
+  <Card title="Sequelize" icon="mdi:database">
+    Es un **ORM (Object Relational Mapper)** para Node.js.
+
+    Permite trabajar con bases de datos usando **modelos y objetos** en lugar de escribir SQL directamente.
+
+    Se utiliza para:
+
+    * Definir modelos de datos
+    * Crear relaciones entre tablas
+    * Gestionar migraciones y consultas
+
+    Instalación:
+
+    ```bash
+    npm install sequelize
 ```
+  </Card>
+</CardGrid>
 
----
-
-### Cors
-
-cors permite habilitar **Cross-Origin Resource Sharing**.
-
-Esto permite que una aplicación frontend (por ejemplo una app en React Native o una web) pueda comunicarse con el servidor.
-
-Instalación:
-
-```bash
-npm install cors
-```
-
----
-
-### Dotenv
-
-dotenv permite cargar variables de entorno desde un archivo `.env`.
-
-Se utiliza para guardar información sensible como:
-
-* credenciales de base de datos
-* claves secretas
-* configuración del servidor
-
-Instalación:
-
-```bash
-npm install dotenv
-```
-
-Ejemplo:
-
-```
-DB_HOST=localhost
-DB_USER=root
-DB_PASSWORD=1234
-```
-
----
-
-### Multer
-
-multer es un middleware para manejar **subida de archivos** en Express.
-
-Se utiliza en este proyecto para:
-
-* subir imágenes
-* procesar formularios con archivos
-* guardar archivos en el servidor
-
-Instalación:
-
-```bash
-npm install multer
-```
-
----
-
-### Sharp
-
-sharp es una librería para **procesamiento de imágenes de alto rendimiento**.
-
-Permite:
-
-* redimensionar imágenes
-* comprimirlas
-* convertir formatos
-
-Instalación:
-
-```bash
-npm install sharp
-```
-
----
-
-### MySQL2
-
-mysql2 es un driver que permite conectar Node.js con bases de datos **MySQL**.
-
-Se utiliza para ejecutar consultas SQL desde el servidor.
-
-Instalación:
-
-```bash
-npm install mysql2
-```
-
----
-
-### Sequelize
-
-sequelize es un **ORM (Object Relational Mapper)** para Node.js.
-
-Permite trabajar con bases de datos usando **modelos y objetos** en lugar de escribir SQL directamente.
-
-Se utiliza para:
-
-* definir modelos de datos
-* crear relaciones entre tablas
-* gestionar migraciones y consultas
-
-Instalación:
-
-```bash
-npm install sequelize
-```
-
----
 
 ## Dependencias de desarrollo
 
@@ -146,97 +147,101 @@ Estas dependencias solo se utilizan durante el desarrollo.
 
 ---
 
-### TypeScript
+<CardGrid>
+  <Card title="TypeScript" icon="logos:typescript">
+    TypeScript añade **tipado estático** a JavaScript.
 
-TypeScript añade **tipado estático** a JavaScript.
+    Ventajas:
 
-Ventajas:
+    * Detección temprana de errores
+    * Mejor autocompletado
+    * Código más mantenible
 
-* detección temprana de errores
-* mejor autocompletado
-* código más mantenible
+    Instalación:
 
-Instalación:
+    ```bash
+    npm install -D typescript
+    ```
+  </Card>
 
-```bash
-npm install -D typescript
-```
+  <Card title="@types/express" icon="logos:express">
+    @types/express proporciona definiciones de tipos para usar Express con TypeScript.
 
----
+    Instalación:
 
-### Types para Express
+    ```bash
+    npm install -D @types/express
+    ```
+  </Card>
+  <Card title="@types/cors" icon="logos:cors">
+    @types/cors añade tipado a la librería cors.
 
-@types/express proporciona definiciones de tipos para usar Express con TypeScript.
+    Instalación:
 
-Instalación:
+    ```bash
+    npm install -D @types/cors
+    ```
+  </Card>
+  <Card title="@types/multer" icon="logos:multer">
+    @types/cors añade tipado a la librería cors.
 
-```bash
-npm install -D @types/express
-```
+    @types/multer proporciona soporte de tipos para multer.
 
----
+    Instalación:
 
-### Types para Cors
+    ```bash
+    npm install -D @types/multer
+    ```
+  </Card>
+  <Card title="TSLint" icon="logos:TSLint">
+    TSLint es una herramienta de análisis estático para revisar la calidad del código TypeScript.
 
-@types/cors añade tipado a la librería cors.
+    Permite detectar:
 
-Instalación:
+    * Errores comunes
+    * Problemas de estilo
+    * Malas prácticas
 
-```bash
-npm install -D @types/cors
-```
+    Instalación:
 
----
+    ```bash
+    npm install -D tslint
+    ```
+  </Card>
 
-### Types para Multer
+</CardGrid>
 
-@types/multer proporciona soporte de tipos para multer.
-
-Instalación:
-
-```bash
-npm install -D @types/multer
-```
-
----
-
-### TSLint
-
-TSLint es una herramienta de análisis estático para revisar la calidad del código TypeScript.
-
-Permite detectar:
-
-* errores comunes
-* problemas de estilo
-* malas prácticas
-
-Instalación:
-
-```bash
-npm install -D tslint
-```
-
----
 
 ## Script de desarrollo
 
-El proyecto incluye el siguiente script en `package.json`:
+<CardGrid>
+  <Card title="TSLint" icon="logos:dev">
+    
+    Pasar de Typescript a JavaScript
 
-```json
-"scripts": {
-  "dev": "node --watch dist/app.js"
-}
-```
+    ```bash
+    tsc -watch
+    ```      
 
-Este script ejecuta el servidor y **reinicia automáticamente cuando cambia el código compilado**.
+    El proyecto incluye el siguiente script en `package.json`:
 
-Para iniciarlo:
+    ```json
+    "scripts": {
+      "dev": "node --watch dist/app.js"
+    }
+    ```
 
-```bash
-npm run dev
-```
+    Este script ejecuta el servidor y **reinicia automáticamente cuando cambia el código compilado**.
 
----
+    Para iniciarlo:
+
+    ```bash
+    npm run dev
+    ```
+  </Card>
+</CardGrid>
+
+
 
 ## Resumen
 

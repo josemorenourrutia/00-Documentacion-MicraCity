@@ -5,15 +5,11 @@ import starlight from '@astrojs/starlight';
 import react from '@astrojs/react';
 // import tailwindcss from '@tailwindcss/vite';
 
-const isDev = process.env.NODE_ENV === 'development';
-
 // https://astro.build/config
 export default defineConfig({
   site: 'https://josemorenourrutia.github.io/00-Documentacion-MicraCity',
 
-  base: isDev
-    ? ''
-    : '/00-Documentacion-MicraCity/dist/',
+  base: '/00-Documentacion-MicraCity/dist/', // 🔑 importante para GitHub Pages
 
   build: {
     assets: 'assets' // 🔑 cambia _astro → assets
@@ -32,6 +28,22 @@ export default defineConfig({
     customCss: [
       "./src/styles/global.css"
     ],
+    // sidebar: [
+    //     {
+    //         label: 'Guides',
+    //         items: [
+    //             // Each item here is one entry in the navigation menu.
+    //             { label: 'Example Guide', slug: 'guides/example' },
+    //         ],
+    //     },
+    //     {
+    //         label: 'Reference',
+    //         autogenerate: { directory: 'reference' },
+    //     },
+    // ],
   }), react()],
 
+  vite: {
+    // plugins: [tailwindcss()],
+  },
 });
