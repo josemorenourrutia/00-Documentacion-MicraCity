@@ -8,13 +8,20 @@ import react from '@astrojs/react';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://josemorenourrutia.github.io/00-Documentacion-MicraCity',
-  base: '/00-Documentacion-MicraCity/dist/', // 🔑 importante para GitHub Pages
+  // base: '/00-Documentacion-MicraCity/dist/', // 🔑 importante para GitHub Pages
 
   build: {
     assets: 'assets' // 🔑 cambia _astro → assets
   },
 
   integrations: [starlight({
+    defaultLocale: 'root', // Opcional si es el único
+    locales: {
+      root: {
+        label: 'Español',
+        lang: 'es', // Aquí especificas que el root es español
+      },
+    },
     title: 'MicraCity',
     social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
     customCss: [

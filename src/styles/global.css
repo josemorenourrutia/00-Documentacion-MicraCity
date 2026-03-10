@@ -22,3 +22,15 @@ site-search {
   font-weight: 600;
   letter-spacing: 0.03em;
 }
+
+.sl-container {
+  max-width: 100% !important;
+}
+
+.sl-markdown-content {
+  max-width: 100% !important;
+}
+
+.card-grid{
+          grid-template-columns: none;
+}
