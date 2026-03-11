@@ -1,0 +1,205 @@
+---
+title: Estructura del proyecto
+sidebar:
+  order: 1
+---
+
+```text
+./
+├── .expo
+│   ├── devices.json
+│   ├── README.md
+│   └── types
+│       └── router.d.ts
+├── .gitignore
+├── app
+│   ├── (home)
+│   │   ├── home-nested.tsx
+│   │   ├── index.tsx
+│   │   ├── index.tsx1
+│   │   └── _layout.tsx
+│   ├── fifth.tsx
+│   ├── first
+│   │   ├── index.tsx
+│   │   ├── nested.tsx
+│   │   └── _layout.tsx
+│   ├── fourth.tsx
+│   ├── second
+│   │   ├── also-nested.tsx
+│   │   ├── calendars
+│   │   │   ├── city
+│   │   │   │   └── [id].tsx
+│   │   │   ├── node
+│   │   │   │   ├── edit
+│   │   │   │   │   ├── [id] copy.tsx
+│   │   │   │   │   ├── [id] copy.tsx1
+│   │   │   │   │   └── [id].tsx
+│   │   │   │   ├── new
+│   │   │   │   │   └── index.tsx
+│   │   │   │   └── [id].tsx
+│   │   │   ├── [id].tsx
+│   │   │   └── _layout.tsx
+│   │   ├── groups
+│   │   │   ├── edit
+│   │   │   │   └── [id].tsx
+│   │   │   ├── [id].tsx
+│   │   │   └── _layout.tsx
+│   │   ├── index copy.tsx1
+│   │   ├── index.tsx
+│   │   ├── nested.tsx
+│   │   └── _layout.tsx
+│   ├── third
+│   │   ├── index.tsx
+│   │   └── _layout.tsx
+│   └── _layout.tsx
+├── app.json
+├── assets
+│   ├── fonts
+│   │   └── SpaceMono-Regular.ttf
+│   └── images
+│       ├── adaptive-icon.png
+│       ├── ciutat.png
+│       ├── ciutat1.png
+│       ├── ciutat2.jpg
+│       ├── ciutat2.png
+│       ├── favicon.png
+│       ├── icon.png
+│       ├── logo.png
+│       ├── next.png
+│       ├── next@2x.png
+│       ├── next@3x.png
+│       ├── partial-react-logo.png
+│       ├── previous.png
+│       ├── previous@2x.png
+│       ├── previous@3x.png
+│       ├── react-logo.png
+│       ├── react-logo@2x.png
+│       ├── react-logo@3x.png
+│       └── splash-icon.png
+├── babel.config.js
+├── components
+│   ├── calendars
+│   │   ├── AgendaCityItem.tsx
+│   │   └── AgendaItem.tsx
+│   ├── datepicker
+│   │   └── InlineDatePicker.tsx
+│   ├── groups
+│   │   ├── GroupCustomDescription.tsx
+│   │   ├── GroupInfo.tsx
+│   │   ├── GroupItem.tsx
+│   │   ├── GroupSocialNetworks.tsx
+│   │   └── GroupType.tsx
+│   ├── picker
+│   │   └── CustomPicker.tsx
+│   └── theme
+│       ├── CustomButton.tsx
+│       ├── CustomButton2.tsx
+│       ├── CustomButton3.tsx
+│       ├── CustomText.tsx
+│       ├── CustomTextInput.tsx
+│       ├── CustomView.tsx
+│       ├── FAB.tsx
+│       ├── InfoRow.tsx
+│       ├── ItemRow.tsx
+│       └── Margin.tsx
+├── constants
+│   ├── colors.ts
+│   ├── testID.ts
+│   ├── theme.ts
+│   └── types.ts
+├── core
+│   ├── api
+│   │   └── nodesApi.ts
+│   ├── auth
+│   │   ├── actions
+│   │   │   └── auth.actions.ts
+│   │   └── interfaces
+│   │       └── user.interface.ts
+│   ├── cps
+│   │   └── actions
+│   │       └── get-cps.action.ts
+│   ├── groups
+│   │   ├── actions
+│   │   │   ├── create-update-group.action.ts
+│   │   │   ├── get-group-by-id.action.ts
+│   │   │   └── get-groups.action.ts
+│   │   └── interfaces
+│   │       ├── group.interface.ts
+│   │       └── nameGroup.interface.ts
+│   └── nodes
+│       ├── actions
+│       │   ├── create-update-nodes.action.ts
+│       │   ├── delete-nodes.action.ts
+│       │   ├── get-group-by-id.action.ts
+│       │   ├── get-node-by-id.action.ts
+│       │   ├── get-nodes.action.ts
+│       │   └── put-node-likes-by-id.action.ts
+│       └── interfaces
+│           ├── calendarName.ts1
+│           └── node.interface.ts
+├── eas.json
+├── eslint.config.js
+├── estructura.txt
+├── expo-env.d.ts
+├── generate-structure.js
+├── global.css
+├── hooks
+│   ├── useAuthStore.ts
+│   ├── useCalendarItem.ts
+│   ├── useCalendarNewItem.ts
+│   ├── useCalendars.ts
+│   ├── useCalendarsCity.ts
+│   ├── useCPNames.ts
+│   ├── useGroupItem.ts
+│   ├── useGroupItem1.ts
+│   ├── useGroupsNames.ts
+│   ├── useImages.ts
+│   ├── useNodeLikes.ts
+│   ├── useNormalizedParams.ts
+│   ├── useStorage.ts
+│   ├── useTCap.ts
+│   ├── useTCapsExtension.ts
+│   ├── useTerms.ts
+│   └── useThemeColor.ts
+├── images
+│   ├── adaptive-icon.png
+│   ├── ciutat.png
+│   ├── ciutat1.png
+│   ├── ciutat2.jpg
+│   ├── ciutat2.png
+│   ├── favicon.png
+│   ├── icon.png
+│   ├── logo.png
+│   ├── next.png
+│   ├── next@2x.png
+│   ├── next@3x.png
+│   ├── partial-react-logo.png
+│   ├── previous.png
+│   ├── previous@2x.png
+│   ├── previous@3x.png
+│   ├── react-logo.png
+│   ├── react-logo@2x.png
+│   ├── react-logo@3x.png
+│   └── splash-icon.png
+├── metro.config.js
+├── nativewind-env.d.ts
+├── package-lock.json
+├── package.json
+├── quefa_ciutat.sql
+├── README.md
+├── store
+│   ├── app.store.ts
+│   ├── i18n.ts
+│   ├── locales
+│   │   ├── ca.json
+│   │   └── es.json
+│   └── secure-storage.adapter.ts
+├── tailwind.config.js
+├── tsconfig.json
+├── types
+│   └── item.ts
+└── utils
+    ├── i18nHelpers.ts
+    └── TCap.ts
+
+```
